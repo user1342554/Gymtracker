@@ -1,0 +1,42 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Dumbbell - center bar -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,51h32v6h-32z" />
+
+    <!-- Left weight plate outer -->
+    <path
+        android:fillColor="#448AFF"
+        android:pathData="M28,36a4,4 0,0 1,4 4v28a4,4 0,0 1,-4 4h-2a4,4 0,0 1,-4 -4v-28a4,4 0,0 1,4 -4z" />
+
+    <!-- Left weight plate inner -->
+    <path
+        android:fillColor="#82B1FF"
+        android:pathData="M38,40a3,3 0,0 1,3 3v22a3,3 0,0 1,-3 3h-2a3,3 0,0 1,-3 -3v-22a3,3 0,0 1,3 -3z" />
+
+    <!-- Right weight plate outer -->
+    <path
+        android:fillColor="#448AFF"
+        android:pathData="M78,36a4,4 0,0 1,4 4v28a4,4 0,0 1,-4 4h-2a4,4 0,0 1,-4 -4v-28a4,4 0,0 1,4 -4z" />
+
+    <!-- Right weight plate inner -->
+    <path
+        android:fillColor="#82B1FF"
+        android:pathData="M69,40a3,3 0,0 1,3 3v22a3,3 0,0 1,-3 3h-2a3,3 0,0 1,-3 -3v-22a3,3 0,0 1,3 -3z" />
+
+    <!-- Left end cap -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,46a2,2 0,0 1,2 2v12a2,2 0,0 1,-2 2h-1a2,2 0,0 1,-2 -2v-12a2,2 0,0 1,2 -2z" />
+
+    <!-- Right end cap -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M87,46a2,2 0,0 1,2 2v12a2,2 0,0 1,-2 2h-1a2,2 0,0 1,-2 -2v-12a2,2 0,0 1,2 -2z" />
+
+</vector>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_dashboard">
+
+    <!-- Dashboard -->
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.gymtracker.ui.dashboard.DashboardFragment"
+        android:label="@string/nav_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboard_to_active_workout"
+            app:destination="@id/navigation_active_workout"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <!-- Workout Plans -->
+    <fragment
+        android:id="@+id/navigation_workout"
+        android:name="com.example.gymtracker.ui.workout.WorkoutPlansFragment"
+        android:label="@string/nav_workout"
+        tools:layout="@layout/fragment_workout_plans">
+        <action
+            android:id="@+id/action_workout_to_plan_detail"
+            app:destination="@id/navigation_plan_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_workout_to_schedule"
+            app:destination="@id/navigation_weekly_schedule"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_workout_to_history"
+            app:destination="@id/navigation_workout_history"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_plan_detail"
+        android:name="com.example.gymtracker.ui.workout.WorkoutPlanDetailFragment"
+        android:label="@string/exercises"
+        tools:layout="@layout/fragment_workout_plan_detail">
+        <argument
+            android:name="planId"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_plan_detail_to_active_workout"
+            app:destination="@id/navigation_active_workout"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_weekly_schedule"
+        android:name="com.example.gymtracker.ui.workout.WeeklyScheduleFragment"
+        android:label="@string/weekly_schedule"
+        tools:layout="@layout/fragment_weekly_schedule" />
+
+    <fragment
+        android:id="@+id/navigation_active_workout"
+        android:name="com.example.gymtracker.ui.workout.ActiveWorkoutFragment"
+        android:label="@string/active_workout"
+        tools:layout="@layout/fragment_active_workout">
+        <argument
+            android:name="planId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_workout_history"
+        android:name="com.example.gymtracker.ui.workout.WorkoutHistoryFragment"
+        android:label="@string/workout_history"
+        tools:layout="@layout/fragment_workout_history">
+        <action
+            android:id="@+id/action_history_to_session_detail"
+            app:destination="@id/navigation_session_detail"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_session_detail"
+        android:name="com.example.gymtracker.ui.workout.SessionDetailFragment"
+        android:label="@string/session_detail"
+        tools:layout="@layout/fragment_session_detail">
+        <argument
+            android:name="sessionId"
+            app:argType="long" />
+    </fragment>
+
+    <!-- Nutrition -->
+    <fragment
+        android:id="@+id/navigation_nutrition"
+        android:name="com.example.gymtracker.ui.nutrition.NutritionFragment"
+        android:label="@string/nav_nutrition"
+        tools:layout="@layout/fragment_nutrition">
+        <action
+            android:id="@+id/action_nutrition_to_food_manager"
+            app:destination="@id/navigation_food_manager"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nutrition_to_goals"
+            app:destination="@id/navigation_nutrition_goals"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_food_manager"
+        android:name="com.example.gymtracker.ui.nutrition.FoodManagerFragment"
+        android:label="@string/food_manager"
+        tools:layout="@layout/fragment_food_manager" />
+
+    <fragment
+        android:id="@+id/navigation_nutrition_goals"
+        android:name="com.example.gymtracker.ui.nutrition.NutritionGoalsFragment"
+        android:label="@string/nutrition_goals"
+        tools:layout="@layout/fragment_nutrition_goals" />
+
+    <!-- Body Weight -->
+    <fragment
+        android:id="@+id/navigation_weight"
+        android:name="com.example.gymtracker.ui.weight.BodyWeightFragment"
+        android:label="@string/nav_weight"
+        tools:layout="@layout/fragment_body_weight" />
+
+    <!-- Stats -->
+    <fragment
+        android:id="@+id/navigation_stats"
+        android:name="com.example.gymtracker.ui.stats.StatsFragment"
+        android:label="@string/nav_stats"
+        tools:layout="@layout/fragment_stats" />
+
+</navigation>

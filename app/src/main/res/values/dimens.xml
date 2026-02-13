@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Spacing -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+
+    <!-- Corner Radii -->
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="input_corner_radius">8dp</dimen>
+    <dimen name="chip_corner_radius">16dp</dimen>
+
+    <!-- Text Sizes -->
+    <dimen name="text_heading_large">24sp</dimen>
+    <dimen name="text_heading">20sp</dimen>
+    <dimen name="text_subheading">16sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_small">10sp</dimen>
+
+    <!-- Component Sizes -->
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    <dimen name="chart_height">200dp</dimen>
+    <dimen name="divider_height">1dp</dimen>
+</resources>
